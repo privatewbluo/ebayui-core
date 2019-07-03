@@ -45,7 +45,7 @@ module.exports = require('marko-widgets').defineComponent({
         this.setSelectedIndex(event.target.selectedIndex);
     },
     setSelectedIndex(selectedIndex) {
-        const el = this.getEls('option')[selectedIndex];
+        const el = this.getEl('select').options[selectedIndex];
         const option = this.state.options[selectedIndex];
 
         this.setState('selectedIndex', selectedIndex);
